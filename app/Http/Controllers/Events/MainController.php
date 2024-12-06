@@ -7,14 +7,14 @@ use App\Models\Event;
 use App\Models\TypeOfEvent;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class MainController extends Controller
 {
     /**
      * Handle the incoming request.
      */
     public function __invoke(Request $request)
     {
-        $events = Event::all();
-        return view('event.index', compact('events'));
+
+        return view('event.main');
     }
 }
