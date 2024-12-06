@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    //
+
+    // Связь с моделью TypeOfEvent
+    public function typeOfEvent()
+    {
+        return $this->belongsTo(TypeOfEvent::class, 'type_of_events_id');
+    }
 }

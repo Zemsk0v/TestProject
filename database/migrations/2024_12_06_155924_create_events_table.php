@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('event', function (Blueprint $table) {
             $table->id();
             $table->string('client_name'); // Имя клиента
             $table->date('event_date'); //  Дата мероприятия
@@ -39,6 +39,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('event');
     }
 };
