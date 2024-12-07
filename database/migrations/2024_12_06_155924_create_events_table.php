@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->string('venue'); // Место проведения
             $table->string('guest_count'); // Количество гостей
             $table->text('description'); // Описание
-            $table->decimal('budget', 10, 2); // Бюджет
+            $table->unsignedBigInteger('budget'); // Бюджет
             $table->string('theme'); // Тематика мероприятия
 
             $table->timestamps();
@@ -26,11 +26,6 @@ return new class extends Migration {
             $table->unsignedBigInteger('type_of_events_id')->nullable();
             $table->index('type_of_events_id', 'event_type_of_events_idx');
             $table->foreign('type_of_events_id', 'event_type_of_events_fk')->on('type_of_events')->references('id');
-
-            $table->unsignedBigInteger('status_id')->nullable();
-            $table->index('status_id', 'event_status_idx');
-            $table->foreign('status_id', 'event_status_id_fk')->on('event_statuses')->references('id');
-
         });
     }
 
