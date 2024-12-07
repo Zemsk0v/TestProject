@@ -41,3 +41,39 @@ a.navbar-brand {
 .event-item {
     border-bottom: 1px solid #4B3D3B;
 }
+.custom-form {
+    border: 2px solid #8a5733; /* 2 пикселя, цвет рамки */
+    background-color: #f4c89b; /* бежевый цвет */
+    border-radius: 8px; /* скругленные углы */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(58, 26, 1);
+    max-width: 600px; /* максимальная ширина формы */
+    margin: 20px auto; /* центрирование формы */
+    overflow-y: auto; /* добавление вертикального скролла */
+    max-height: 80vh; /* максимальная высота формы */
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #7e5834; /* более насыщенный бежевый цвет для кнопки */
+    border: none;
+}
+/* Стили для скролл-бара в форме */
+.custom-form::-webkit-scrollbar {
+    width: 10px; /* Ширина скролл-бара */
+}
+
+.custom-form::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Цвет фона трека скролл-бара */
+    border-radius: 8px; /* Закругленные углы трека */
+}
+
+.custom-form::-webkit-scrollbar-thumb {
+    background: #644812; /* Цвет ползунка */
+    border-radius: 8px; /* Закругленные углы ползунка */
+}
+
+
