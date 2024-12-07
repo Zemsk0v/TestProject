@@ -14,16 +14,16 @@
         <div class="navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link mx-2 active" aria-current="page" href="#">Main</a>
+                    <a class="nav-link mx-2 active" aria-current="page" href="{{route('events.main')}}">Main</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="#">About</a>
+                    <a class="nav-link mx-2" href="{{route('events.about')}}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="#">Posts</a>
+                    <a class="nav-link mx-2" href="{{route('events.index')}}">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="#">Contacts</a>
+                    <a class="nav-link mx-2" href="{{route('events.contacts')}}">Contacts</a>
                 </li>
             </ul>
         </div>
