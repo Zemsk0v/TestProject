@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-
+    /**
+ * Связь с моделью TypeOfEvent.
+ *
+ * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+ */
+    protected $guarded = [];
     // Связь с моделью TypeOfEvent
     public function typeOfEvent()
     {

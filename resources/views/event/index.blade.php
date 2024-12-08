@@ -3,7 +3,6 @@
     <div class="events-container">
         <ol class="list-group list-group-numbered">
             @foreach($events as $event)
-
                 <li class="list-group-item d-flex justify-content-between align-items-start event-item" style="background-color: #f5e3d2;">
                     <div class="ms-2 me-auto custom">
                         <div class="fw-bold text-brown">{{$event->client_name}}</div>

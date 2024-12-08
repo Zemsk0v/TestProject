@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('event', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('client_name'); // Имя клиента
             $table->date('event_date'); //  Дата мероприятия
@@ -22,14 +22,11 @@ return new class extends Migration {
             $table->string('theme'); // Тематика мероприятия
 
             $table->timestamps();
+            $table->softDeletes();
 
             $table->unsignedBigInteger('type_of_events_id')->nullable();
             $table->index('type_of_events_id', 'event_type_of_events_idx');
             $table->foreign('type_of_events_id', 'event_type_of_events_fk')->on('type_of_events')->references('id');
-
-            $table->unsignedBigInteger('status_id')->nullable();
-            $table->index('status_id', 'event_status_idx');
-            $table->foreign('status_id', 'event_status_id_fk')->on('event_statuses')->references('id');
 
         });
     }

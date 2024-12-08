@@ -7,13 +7,13 @@
             <label for="client_name" class="form-label">Client name:</label>
             <input type="text" class="form-control" id="client_name" placeholder="Enter name" name="client_name">
         </div>
-
-        <select class="form-select mb-3" aria-label="Default select example" name="event_type">
-            @foreach($typesOfEvent as $typeOfEvent)
-                <option value="{{$typeOfEvent->id}}">{{$typeOfEvent->title}}</option>
-            @endforeach
-        </select>
-
+        <div class="mb-3 mt-3">
+            <select class="form-select mb-3" aria-label="Default select example" name="type_of_events_id">
+                @foreach($typesOfEvent as $typeOfEvent)
+                    <option value="{{$typeOfEvent->id}}">{{$typeOfEvent->title}}</option>
+                @endforeach
+            </select>
+        </div>
         <div class="mb-3">
             <label for="event_date" class="form-label">Event date:</label>
             <input type="date" class="form-control" id="event_date" name="event_date">
@@ -31,7 +31,8 @@
 
         <div class="mb-3">
             <label for="guest_count" class="form-label">Guest count:</label>
-            <input type="number" class="form-control" id="guest_count" placeholder="Enter the number of guests" name="guest_count">
+            <input type="number" class="form-control" id="guest_count" placeholder="Enter the number of guests"
+                   name="guest_count">
         </div>
 
         <div class="mb-3">
