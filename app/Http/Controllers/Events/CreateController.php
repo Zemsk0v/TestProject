@@ -12,7 +12,7 @@ class CreateController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke()
     {
         $typesOfEvent = TypeOfEvent::all();
         return view('event.create', compact('typesOfEvent'));

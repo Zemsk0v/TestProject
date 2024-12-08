@@ -23,7 +23,7 @@ class UpdateRequest extends FormRequest
     {
         return [
             'client_name'=> 'string',           // тип: строка
-            'type_of_events_id' => 'string',    // тип: строка
+            'type_of_events_id' => '',    // тип: строка
             'event_date' => 'date',             // тип: дата
             'event_time' => 'date_format:H:i',  // тип: время часы минуты
             'venue' => 'string',                // тип: строка

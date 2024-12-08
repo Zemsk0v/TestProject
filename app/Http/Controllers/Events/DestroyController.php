@@ -12,8 +12,9 @@ class DestroyController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke(Event $event)
     {
-
+$event->delete();
+return redirect()->route('events.index');
     }
 }

@@ -1,8 +1,9 @@
 @extends('layouts.event')
 
 @section('content')
-    <form action="{{ route('events.store') }}" method="POST" class="custom-form">
+    <form action="{{ route('events.update', $event->id) }}" method="POST" class="custom-form">
         @csrf
+        @method('PATCH')
         <div class="mb-3 mt-3">
             <label for="client_name" class="form-label">Client name:</label>
             <input type="text" class="form-control" id="client_name" placeholder="Enter name" name="client_name">
@@ -49,6 +50,7 @@
             <label for="description" class="form-label">Description:</label>
             <textarea class="form-control" rows="5" id="description" name="description"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Add</button>
+        <a href="{{ route('events.show', $event->id) }}" class="button-my-button">Back</a>
+        <button type="submit" class="button-my-button-brown">Update</button>
     </form>
 @endsection

@@ -75,5 +75,63 @@ a.navbar-brand {
     background: #644812; /* Цвет ползунка */
     border-radius: 8px; /* Закругленные углы ползунка */
 }
+.button-my-button {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    background-color: #f5d7b2;
+    border-color: black;
+    padding: 5px 10px;
+    margin: 1px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 0 0 auto;
+}
+.button-my-button-orange {
+    text-decoration: none;
+    width: 80px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin: 1px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 0 0 auto;
 
+    background-color: #FFA500; /* Оранжевый цвет */
+    border-color: #FFA500;
+    color: white; /* Белый текст */
+}
+.button-my-button-red {
+    text-decoration: none;
 
+    width: 80px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin: 1px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 0 0 auto;
+    background-color: #FF0000; /* Красный цвет */
+    border-color: #FF0000;
+    color: white; /* Белый текст */
+}
+.button-my-button-brown {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    background-color:#faa92f;
+    border-color: black;
+    padding: 5px 10px;
+    margin: 1px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 0 0 auto;
+}
