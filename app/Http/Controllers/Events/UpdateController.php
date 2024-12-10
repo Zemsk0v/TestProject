@@ -8,7 +8,7 @@ use App\Models\Event;
 use App\Models\TypeOfEvent;
 use Illuminate\Http\Request;
 
-class UpdateController extends Controller
+class UpdateController extends BaseController
 {
     /**
      * Handle the incoming request.
@@ -17,7 +17,7 @@ class UpdateController extends Controller
     {
 
         $data = $request->validated();
-        $event->update($data); // Использую экземпляр $event для вызова метода update()
+        $this->service->update($event, $data);
         return redirect()->route('events.show', $event->id);
     }
 }

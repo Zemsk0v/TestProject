@@ -7,7 +7,7 @@ use App\Models\Event;
 use App\Models\TypeOfEvent;
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class AboutController extends BaseController
 {
     /**
      * Handle the incoming request.

@@ -8,7 +8,7 @@ use App\Models\Event;
 use App\Models\TypeOfEvent;
 use Illuminate\Http\Request;
 
-class StoreController extends Controller
+class StoreController extends BaseController
 {
     /**
      * Handle the incoming request.
@@ -16,7 +16,7 @@ class StoreController extends Controller
     public function __invoke(StoreRequest $request)
     {
     $data = $request->validated();
-    Event::create($data);
+    $this->service->store($data);
     return redirect()->route('events.index');
     }
 }

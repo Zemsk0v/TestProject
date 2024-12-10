@@ -7,14 +7,13 @@ use App\Models\Event;
 use App\Models\TypeOfEvent;
 use Illuminate\Http\Request;
 
-class ContactsController extends Controller
+class ContactsController extends BaseController
 {
     /**
      * Handle the incoming request.
      */
     public function __invoke(Request $request)
     {
-
         return view('event.contacts');
     }
 }
