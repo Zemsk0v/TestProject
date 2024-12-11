@@ -2,15 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    /**
- * Связь с моделью TypeOfEvent.
- *
- * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
- */
+    use HasFactory;
     protected $guarded = [];
     // Связь с моделью TypeOfEvent
     public function typeOfEvent()
