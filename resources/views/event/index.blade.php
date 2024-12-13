@@ -12,21 +12,20 @@
                             <p class="card-text">Event type: {{$event->typeOfEvent->title}}</p>
                             <p class="text-brown">Date: {{$event->event_date}}, </p>
                             <p class="text-brown">Time: {{$event->event_time}}.</p>
-    {{-- <p class="event-type">Venue: {{$event->venue}}</p>
-    <p class="event-type">Guests: {{$event->guest_count}}</p>
-    <p class="event-type">Budget: {{$event->budget}}</p>
-    <p class="event-type">Theme: {{$event->theme}}</p>
-    <p class="event-type">Description: {{$event->description}}</p>--}}
-</div>
-</a>
-<span class="badge bg-light text-dark rounded-pill">{{$event->guest_count}}</span>
-
-</li>
-@endforeach
-<div>
-{{$events->links()}}
-</div>
-</ol>
-<a href="{{ route('events.create') }}" class="btn btn-success mb-2">Add Post</a>
-</div>
+                            {{-- <p class="event-type">Venue: {{$event->venue}}</p>
+                            <p class="event-type">Guests: {{$event->guest_count}}</p>
+                            <p class="event-type">Budget: {{$event->budget}}</p>
+                            <p class="event-type">Theme: {{$event->theme}}</p>
+                            <p class="event-type">Description: {{$event->description}}</p>--}}
+                        </div>
+                    </a>
+                    <span class="badge bg-light text-dark rounded-pill">{{$event->guest_count}}</span>
+                </li>
+            @endforeach
+            <div>
+                {{$events->withQueryString()->links()}}
+            </div>
+        </ol>
+        <a href="{{ route('events.create') }}" class="btn btn-success mb-2">Add Post</a>
+    </div>
 @endsection
