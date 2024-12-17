@@ -2,6 +2,7 @@
 @section('content')
     <div class="events-container">
         <ol class="list-group list-group-numbered">
+            <h1>Only for admin page</h1>
             @foreach($events as $event)
                 <li class="list-group-item d-flex justify-content-between align-items-start event-item"
                     style="background-color: #f5e3d2;">

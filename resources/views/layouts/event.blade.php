@@ -9,6 +9,11 @@
     <title>Events</title>
 </head>
 <body>
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 <div>
     <nav class="navbar navbar-expand-sm navbar-light mb-3" id="neubar">
         <div class="navbar-collapse" id="navbarNavDropdown">
@@ -20,10 +25,12 @@
                     <a class="nav-link mx-2" href="{{ route('events.about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="{{ route('events.index') }}">Events</a>
+                    <a class="nav-link mx-2" href="{{ route('events.contacts') }}">Contacts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="{{ route('events.contacts') }}">Contacts</a>
+                    @if(auth()->user() && auth()->user()->role === 'admin')
+                        <a class="nav-link mx-2" href="{{ route('events.index') }}">Events</a>
+                    @endif
                 </li>
             </ul>
 
